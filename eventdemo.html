@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Event Demo</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+
+<body>
+    <div id="app">
+        <!-- We can also use @ in front of v-on: -->
+        <button @click="addone()">Add age</button>
+        <button v-on:dblclick="add(10)">Add Ten age</button>
+        <button v-on:dblclick="sub(10)">Sub Ten age</button>
+        <button v-on:click="subone()">Sub age</button>
+        <p>My age is: {{ age }}</p>
+        <a v-on:click="clicklink" href="https://www.google.com/">Google link</a>
+        <a v-on:click.prevent="clicklink" href="https://www.google.com/">Google link</a><br>
+        <label>Name:</label>
+        <input type="text" v-on:keyup.space="namelog">
+        <label>Age:</label>
+        <input type="text" v-on:keyup.enter="agelog">
+
+
+
+        <div id="appbox" v-on:mousemove="updatevaluexy">{{ x }},{{ y }}</div>
+    </div>
+    <script src="event.js"></script>
+</body>
+
+</html>
