@@ -24,8 +24,9 @@
         <input type="text" v-on:keyup.space="namelog">
         <label>Age:</label>
         <input type="text" v-on:keyup.enter="agelog">
-
-
+        <label>User Name:</label>
+        <input type="text" v-model="uname">
+        <span>{{ uname }}</span>
 
         <div id="appbox" v-on:mousemove="updatevaluexy">{{ x }},{{ y }}</div>
     </div>

@@ -3,7 +3,9 @@ new Vue({
     data: {
         age: 23,
         x: 0,
-        y: 0
+        y: 0,
+        // Which we write in text view in span
+        uname: ''
     },
     methods: {
         addone: function () {
@@ -37,5 +39,8 @@ new Vue({
         agelog: function () {
             console.log("enter your age");
         }
+
+
+
     }
 });
